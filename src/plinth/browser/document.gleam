@@ -1,6 +1,6 @@
 import gleam/javascript/array.{type Array}
 import plinth/browser/element.{type Element}
-import plinth/browser/event.{type Event}
+import plinth/browser/event_type.{type Event}
 
 @external(javascript, "../../document_ffi.mjs", "querySelector")
 pub fn query_selector(selector: String) -> Result(Element, Nil)
@@ -19,3 +19,6 @@ pub fn create_text_node(content: String) -> Element
 
 @external(javascript, "../../document_ffi.mjs", "body")
 pub fn body() -> Element
+
+@external(javascript, "../../document_ffi.mjs", "getElementById")
+pub fn get_element_by_id() -> Result(Element, Nil)
