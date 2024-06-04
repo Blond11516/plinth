@@ -70,5 +70,9 @@ export function focus(element) {
 }
 
 export function appendChild(parent, child) {
-  parent.appendChild(child)
+  parent.appendChild(child);
+}
+
+export function addEventListener(element, type, listener) {
+  element.addEventListener(type, listener);
 }

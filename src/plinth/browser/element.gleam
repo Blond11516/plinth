@@ -1,4 +1,5 @@
 import gleam/javascript/promise.{type Promise}
+import plinth/browser/event_type.{type Event}
 
 pub type Element
 
@@ -42,3 +43,10 @@ pub fn selection_start(element: Element) -> Result(Int, Nil)
 
 @external(javascript, "../../element_ffi.mjs", "setSelectionRange")
 pub fn set_selection_range(element: Element, start: Int, end: Int) -> Nil
+
+@external(javascript, "../../element_ffi.mjs", "addEventListener")
+pub fn add_event_listener(
+  element: Element,
+  type_: String,
+  listener: fn(Event) -> Nil,
+) -> Nil
