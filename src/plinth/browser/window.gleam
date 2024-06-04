@@ -1,6 +1,6 @@
 import gleam/dynamic
 import gleam/javascript/promise.{type Promise}
-import plinth/browser/event.{type Event}
+import plinth/browser/event_type.{type Event}
 
 pub type Window
 
